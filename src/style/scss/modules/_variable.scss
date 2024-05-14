@@ -1,0 +1,37 @@
+$primary: #fff;
+$secondary: #00b289;
+$tersier: #f8db62;
+$text: #4c4d5f;
+
+@mixin logo {
+  font-size: 2rem;
+  color: $secondary;
+}
+
+@mixin button($bg, $color) {
+  background-color: #{$bg};
+  color: #{$color};
+  border: 1px solid $secondary;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: 300ms;
+
+  @if $bg == $primary {
+    &:hover {
+      background-color: $color;
+      color: $bg;
+    }
+  } @else {
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

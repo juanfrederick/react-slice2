@@ -1,0 +1,60 @@
+@import "./variable";
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 0 2rem 0;
+
+  h2 {
+    font-weight: 400;
+  }
+
+  .right-side-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    h4 {
+      color: $secondary;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+    .check-button-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      h3 {
+        font-weight: 400;
+        color: $text;
+      }
+
+      .selected {
+        font-weight: 600;
+      }
+
+      .check-button {
+        border-radius: 2rem;
+        width: 50px;
+        height: 30px;
+        background-color: $secondary;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 100%;
+          background-color: $primary;
+        }
+      }
+
+      .right {
+        justify-content: end;
+      }
+    }
+  }
+}

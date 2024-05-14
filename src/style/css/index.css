@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+div .navbar {
+  background-color: #fff;
+  padding: 1.5rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+div div .navbar_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+div div .navbar_logo .logo {
+  font-size: 2rem;
+  color: #00b289;
+}
+div div .navbar_logo h1 {
+  color: #00b289;
+  cursor: pointer;
+}
+div .navbar_hamb {
+  width: 40px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 2rem;
+  right: 3.2rem;
+  cursor: pointer;
+  z-index: 1001;
+  position: fixed;
+}
+div .navbar_hamb div {
+  width: 100%;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: #4c4d5f;
+  transform-origin: center center;
+}
+div .navbar_hamb .first {
+  animation: first 1s forwards;
+}
+@keyframes first {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(11px) rotate(45deg);
+  }
+}
+div .navbar_hamb .first-reverse {
+  animation: first-reverse 1s forwards;
+}
+@keyframes first-reverse {
+  0% {
+    transform: translateY(11px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+div .navbar_hamb .second {
+  animation: second 1s forwards;
+}
+@keyframes second {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+div .navbar_hamb .second-reverse {
+  animation: second-reverse 1s forwards;
+}
+@keyframes second-reverse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+div .navbar_hamb .third {
+  animation: third 1s forwards;
+}
+@keyframes third {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+div .navbar_hamb .third-reverse {
+  animation: third-reverse 1s forwards;
+}
+@keyframes third-reverse {
+  0% {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #fff;
+  padding: 2.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  z-index: 1000;
+}
+.sidebar .logo {
+  font-size: 2rem;
+  color: #00b289;
+}
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4c4d5f;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.sidebar-item p {
+  font-size: 1rem;
+  color: #4c4d5f;
+}
+.sidebar-item .logo {
+  font-size: 1.5rem;
+  color: #4c4d5f;
+}
+.sidebar .dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+  margin-top: -1rem;
+}
+.sidebar .show-dropdown {
+  margin-top: 0.1rem;
+  height: 220px;
+}
+.dropdown .sidebar-item {
+  padding-bottom: 1rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dropdown .sidebar-item p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.dropdown .sidebar-item .small-text {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.sidebar-btn-1 {
+  background-color: #fff;
+  color: #00b289;
+  border: 1px solid #00b289;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: 300ms;
+}
+.sidebar-btn-1:hover {
+  background-color: #00b289;
+  color: #fff;
+}
+.sidebar-btn-2 {
+  background-color: #00b289;
+  color: #fff;
+  border: 1px solid #00b289;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: 300ms;
+}
+.sidebar-btn-2:hover {
+  filter: brightness(90%);
+}
+
+.sidebar-show {
+  transform: translateX(0);
+  transition: 500ms;
+}
+
+.sidebar-hidden {
+  transform: translateX(100%);
+  transition: 500ms;
+}
+
+.card-list {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5rem;
+}
+.card-list .card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 2rem;
+  padding: 3.5rem 1rem;
+  box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 0.3rem;
+  color: #4c4d5f;
+}
+.card-list .card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.card-list .card-title h3 {
+  font-size: 1.4rem;
+}
+.card-list .card-price {
+  width: 100%;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  border-bottom: 1px solid #00b289;
+}
+.card-list .card-price h1 {
+  font-size: 4rem;
+}
+.card-list .card-price p {
+  font-size: 1.5rem;
+}
+.card-list .card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.card-list .card ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.card-list .card ul li .check-icon {
+  color: #00b289;
+}
+.card-list .card button {
+  background-color: #00b289;
+  color: #fff;
+  border: 1px solid #00b289;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  transition: 300ms;
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  margin-top: auto;
+}
+.card-list .card button:hover {
+  filter: brightness(90%);
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 0 2rem 0;
+}
+.pricing h2 {
+  font-weight: 400;
+}
+.pricing .right-side-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.pricing .right-side-pricing h4 {
+  color: #00b289;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.pricing .right-side-pricing .check-button-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.pricing .right-side-pricing .check-button-container h3 {
+  font-weight: 400;
+  color: #4c4d5f;
+}
+.pricing .right-side-pricing .check-button-container .selected {
+  font-weight: 600;
+}
+.pricing .right-side-pricing .check-button-container .check-button {
+  border-radius: 2rem;
+  width: 50px;
+  height: 30px;
+  background-color: #00b289;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+.pricing .right-side-pricing .check-button-container .check-button .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.pricing .right-side-pricing .check-button-container .right {
+  justify-content: end;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  padding: 8rem 1rem;
+  height: 200vh;
+}
+
+/*# sourceMappingURL=index.css.map */

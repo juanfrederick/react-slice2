@@ -1,0 +1,139 @@
+@import "./variable";
+
+div {
+  .navbar {
+    background-color: $primary;
+    // border: 1px solid $secondary;
+    padding: 1.5rem 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // z-index: 1001;
+
+    div &_logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .logo {
+        @include logo;
+      }
+
+      h1 {
+        color: $secondary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbar_hamb {
+    width: 40px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 2rem;
+    right: 3.2rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+
+    div {
+      width: 100%;
+      height: 4px;
+      border-radius: 1rem;
+      background-color: $text;
+      transform-origin: center center;
+    }
+
+    .first {
+      animation: first 1s forwards;
+      @include keyframes(first) {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(11px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(11px) rotate(45deg);
+        }
+      }
+    }
+
+    .first-reverse {
+      animation: first-reverse 1s forwards;
+      @include keyframes(first-reverse) {
+        0% {
+          transform: translateY(11px) rotate(45deg);
+        }
+        50% {
+          transform: translateY(11px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+      }
+    }
+
+    .second {
+      animation: second 1s forwards;
+
+      @include keyframes(second) {
+        0% {
+          opacity: 100;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .second-reverse {
+      animation: second-reverse 1s forwards;
+
+      @include keyframes(second-reverse) {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 100;
+        }
+      }
+    }
+
+    .third {
+      animation: third 1s forwards;
+      @include keyframes(third) {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-11px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-11px) rotate(-45deg);
+        }
+      }
+    }
+
+    .third-reverse {
+      animation: third-reverse 1s forwards;
+      @include keyframes(third-reverse) {
+        0% {
+          transform: translateY(-11px) rotate(-45deg);
+        }
+        50% {
+          transform: translateY(-11px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+      }
+    }
+  }
+}
