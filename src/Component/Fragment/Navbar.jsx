@@ -4,6 +4,7 @@ import { BiJoystick } from "react-icons/bi";
 // eslint-disable-next-line react/prop-types
 function Navbar({ hambActive, setHambActive }) {
   const [reverseActice, setReverseActive] = useState(false);
+  const [invi, setInvi] = useState(true);
 
   useEffect(() => {
     if (hambActive) {
@@ -11,9 +12,21 @@ function Navbar({ hambActive, setHambActive }) {
     }
   }, [hambActive]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", function (e) {
+      if (window.scrollY > 0) {
+        console.log("masuk warna");
+        setInvi(false);
+      } else if (window.scrollY === 0) {
+        console.log("masuk invi");
+        setInvi(true);
+      }
+    });
+  }, [invi]);
+
   return (
     <div>
-      <div className="navbar">
+      <div className={`navbar ${invi ? "navbar-invi" : "navbar-white"}`}>
         <div className="navbar_logo">
           <BiJoystick className="logo" />
           <h1>Bonsai</h1>

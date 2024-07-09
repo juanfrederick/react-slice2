@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 div .navbar {
-  background-color: #fff;
   padding: 1.5rem 3.2rem;
   display: flex;
   align-items: center;
@@ -9,6 +8,7 @@ div .navbar {
   top: 0;
   left: 0;
   right: 0;
+  transition: all 0.3s;
 }
 div div .navbar_logo {
   display: flex;
@@ -22,6 +22,9 @@ div div .navbar_logo .logo {
 div div .navbar_logo h1 {
   color: #00b289;
   cursor: pointer;
+}
+div .navbar-white {
+  background-color: #fff;
 }
 div .navbar_hamb {
   width: 40px;
@@ -226,9 +229,12 @@ div .navbar_hamb .third-reverse {
 }
 
 .card-list {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 5rem;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 .card-list .card {
   display: flex;
@@ -240,6 +246,8 @@ div .navbar_hamb .third-reverse {
   box-shadow: 5px 5px 11px 1px rgba(0, 0, 0, 0.24);
   border-radius: 0.3rem;
   color: #4c4d5f;
+  width: 450px;
+  background-color: #fff;
 }
 .card-list .card-title {
   display: flex;
@@ -299,7 +307,7 @@ div .navbar_hamb .third-reverse {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 .pricing h2 {
   font-weight: 400;
@@ -323,6 +331,7 @@ div .navbar_hamb .third-reverse {
 .pricing .right-side-pricing .check-button-container h3 {
   font-weight: 400;
   color: #4c4d5f;
+  transition: all 0.3s;
 }
 .pricing .right-side-pricing .check-button-container .selected {
   font-weight: 600;
@@ -332,7 +341,7 @@ div .navbar_hamb .third-reverse {
   width: 50px;
   height: 30px;
   background-color: #00b289;
-  padding: 2px;
+  padding: 2px 3px;
   display: flex;
   align-items: center;
 }
@@ -341,11 +350,179 @@ div .navbar_hamb .third-reverse {
   height: 25px;
   border-radius: 100%;
   background-color: #fff;
+  transition: all 0.3s;
+  margin-left: 0;
 }
-.pricing .right-side-pricing .check-button-container .right {
-  justify-content: end;
+.pricing .right-side-pricing .check-button-container .check-button .right {
+  margin-left: 45%;
 }
 
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.feature h1 {
+  font-weight: lighter;
+  text-align: center;
+}
+.feature .feature-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.feature .feature-item .header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.feature .feature-item .header h2 {
+  font-weight: 600;
+}
+.feature .feature-item .header a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #00b289;
+}
+.feature .feature-item .feature-price h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.feature .feature-item .feature-price p {
+  font-weight: 600;
+}
+
+.start-now {
+  padding: 6rem 4rem;
+  background-color: #f3faff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.start-now h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.start-now h1 span {
+  color: #00b289;
+}
+.start-now button {
+  background-color: #00b289;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1155px) {
+  .start-now {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .start-now h1 {
+    font-size: 2.5rem;
+  }
+  .start-now button {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .start-now {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .start-now h1 {
+    font-size: 2rem;
+  }
+  .start-now button {
+    font-size: 1rem;
+  }
+}
+.faq-container {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 6rem;
+}
+.faq-container .faq-header {
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #00b289;
+}
+.faq-container .question-item {
+  padding: 0.5rem 0;
+}
+.faq-container .question-item .header-container {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-container .question-item .header-container h2 {
+  font-weight: lighter;
+}
+.faq-container .question-item .content-container {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-container .question-item .show {
+  max-height: 500px;
+  padding: 1rem 0;
+}
+.faq-container .question-item .hidden {
+  max-height: 0;
+  padding: 0;
+}
+.faq-container .question-item:hover {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 940px) {
+  .faq-container {
+    padding: 0 1rem;
+  }
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.footer-container .footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-container .footer-item h2 {
+  font-weight: lighter;
+}
+.footer-container .footer-item .list-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.footer-container .footer-item .list-container a {
+  text-decoration: none;
+  color: #4c4d5f;
+}
+
+@media screen and (max-width: 560px) {
+  .footer-container {
+    justify-content: space-between;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -357,8 +534,21 @@ body {
 }
 
 .container {
-  padding: 8rem 1rem;
-  height: 200vh;
+  padding: 8rem 8rem;
+}
+
+.background {
+  position: absolute;
+  top: -230%;
+  right: -100%;
+  z-index: -99;
+  scale: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 8rem 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

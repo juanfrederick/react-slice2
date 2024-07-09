@@ -1,0 +1,55 @@
+@import "variable";
+
+.faq-container {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 6rem;
+
+  .faq-header {
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: $secondary;
+  }
+
+  .question-item {
+    padding: 0.5rem 0;
+
+    .header-container {
+      display: flex;
+      cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: lighter;
+      }
+    }
+
+    .content-container {
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .show {
+      max-height: 500px;
+      padding: 1rem 0;
+    }
+
+    .hidden {
+      max-height: 0;
+      padding: 0;
+    }
+  }
+
+  .question-item:hover {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+}
+@media screen and (max-width: 940px) {
+  .faq-container {
+    padding: 0 1rem;
+  }
+}

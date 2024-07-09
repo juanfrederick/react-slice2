@@ -6,7 +6,7 @@ function CheckButton({ onclick, right }) {
       className={`check-button ${right ? "right" : undefined}`}
       onClick={onclick}
     >
-      <div className="circle"></div>
+      <div className={`circle ${right ? "right" : undefined}`}></div>
     </div>
   );
 }

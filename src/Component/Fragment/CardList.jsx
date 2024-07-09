@@ -1,14 +1,14 @@
 import Card from "../Element/Card";
 import CardLi from "../Element/CardLi";
 
-function CardList() {
+function CardList({ isYearly }) {
   return (
     <div className="card-list">
       <Card
         title="Starter"
         text="Ideal for freelancers and contractors just starting out."
-        price="24"
-        per="/MONTH"
+        price={isYearly ? 24 * 12 : 24}
+        per={isYearly ? "/YEAR" : "/MONTH"}
       >
         <CardLi text="All Templates" />
         <CardLi text="Unlimited Clients & Projects" />
@@ -23,8 +23,8 @@ function CardList() {
       <Card
         title="Professional"
         text="Everything a growing independent business needs to thrive."
-        price="39"
-        per="/MONTH"
+        price={isYearly ? 39 * 12 : 39}
+        per={isYearly ? "/YEAR" : "/MONTH"}
       >
         <CardLi text="Everything in Starter plus..." />
         <CardLi text="Custom Branding" />
@@ -40,8 +40,8 @@ function CardList() {
       <Card
         title="Business"
         text="The perfect package for small businesses and agencies."
-        price="79"
-        per="/MONTH"
+        price={isYearly ? 79 * 12 : 79}
+        per={isYearly ? "/YEAR" : "/MONTH"}
       >
         <CardLi text="Everything in Starter and Professional plus..." />
         <CardLi text="Subcontractor Management" />

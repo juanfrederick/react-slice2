@@ -1,0 +1,35 @@
+@import "variable";
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      font-weight: lighter;
+    }
+
+    .list-container {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+
+      a {
+        text-decoration: none;
+        color: $text;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer-container {
+    justify-content: space-between;
+  }
+}

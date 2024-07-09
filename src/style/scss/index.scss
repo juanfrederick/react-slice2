@@ -2,6 +2,10 @@
 @use "./modules/sidebar";
 @use "./modules//cardlist";
 @use "./modules/pricing";
+@use "./modules/feature";
+@use "./modules/startnow";
+@use "./modules/question";
+@use "./modules/footer";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 * {
@@ -16,6 +20,19 @@ body {
 }
 
 .container {
-  padding: 8rem 1rem;
-  height: 200vh;
+  padding: 8rem 8rem;
+}
+
+.background {
+  position: absolute;
+  top: -230%;
+  right: -100%;
+  z-index: -99;
+  scale: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 8rem 1rem;
+  }
 }
