@@ -531,6 +531,7 @@ div .navbar_hamb .third-reverse {
 
 body {
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
