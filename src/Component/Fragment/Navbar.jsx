@@ -15,10 +15,8 @@ function Navbar({ hambActive, setHambActive }) {
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       if (window.scrollY > 0) {
-        console.log("masuk warna");
         setInvi(false);
       } else if (window.scrollY === 0) {
-        console.log("masuk invi");
         setInvi(true);
       }
     });
@@ -30,6 +28,16 @@ function Navbar({ hambActive, setHambActive }) {
         <div className="navbar_logo">
           <BiJoystick className="logo" />
           <h1>Bonsai</h1>
+        </div>
+        <div className="navbar-item">
+          <p>Product</p>
+          <p>Templates</p>
+          <p>Pricing</p>
+          <p>Reviews</p>
+        </div>
+        <div className="navbar-button-container">
+          <button className="login">Login</button>
+          <button className="free">Start Free</button>
         </div>
       </div>
       <div

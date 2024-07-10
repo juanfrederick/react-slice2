@@ -23,6 +23,46 @@ div div .navbar_logo h1 {
   color: #00b289;
   cursor: pointer;
 }
+div .navbar .navbar-item {
+  display: flex;
+  gap: 2rem;
+}
+div .navbar .navbar-item p {
+  cursor: pointer;
+}
+div .navbar .navbar-button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+div .navbar .navbar-button-container button {
+  padding: 0.6rem 2rem;
+  border: 0;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+div .navbar .navbar-button-container button:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+div .navbar .navbar-button-container .login {
+  background-color: rgba(0, 255, 255, 0);
+  border: 2px solid #00b289;
+  color: #00b289;
+}
+div .navbar .navbar-button-container .free {
+  background-color: #00b289;
+  color: #fff;
+}
+@media only screen and (max-width: 1000px) {
+  div .navbar .navbar-item {
+    display: none;
+  }
+  div .navbar .navbar-button-container {
+    display: none;
+  }
+}
 div .navbar-white {
   background-color: #fff;
 }
@@ -121,6 +161,11 @@ div .navbar_hamb .third-reverse {
   }
   100% {
     transform: translateY(0) rotate(0deg);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  div .navbar_hamb {
+    display: none;
   }
 }
 

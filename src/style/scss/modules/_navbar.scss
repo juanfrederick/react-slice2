@@ -26,6 +26,56 @@ div {
         cursor: pointer;
       }
     }
+
+    .navbar-item {
+      display: flex;
+      gap: 2rem;
+
+      p {
+        cursor: pointer;
+      }
+    }
+
+    .navbar-button-container {
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        padding: 0.6rem 2rem;
+        border: 0;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+      }
+
+      .login {
+        background-color: rgba(0, 255, 255, 0);
+        border: 2px solid $secondary;
+        color: $secondary;
+      }
+
+      .free {
+        background-color: $secondary;
+        color: $primary;
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .navbar-item {
+        display: none;
+      }
+
+      .navbar-button-container {
+        display: none;
+      }
+    }
   }
 
   .navbar-white {
@@ -136,6 +186,12 @@ div {
           transform: translateY(0) rotate(0deg);
         }
       }
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .navbar_hamb {
+      display: none;
     }
   }
 }

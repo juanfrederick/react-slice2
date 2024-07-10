@@ -13,6 +13,14 @@ function App() {
   const [hambActive, setHambActive] = useState(false);
   const [isYearly, setIsYearly] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1000) {
+        setHambActive(false);
+      }
+    });
+  }, []);
+
   return (
     <div>
       <Background />
